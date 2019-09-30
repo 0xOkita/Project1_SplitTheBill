@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="run"
+    tools:context=".SplashAnimation">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="saving.json"
+        app:lottie_loop="false">
+
+    </com.airbnb.lottie.LottieAnimationView>
+
+    <com.tomer.fadingtextview.FadingTextView
+        android:id="@+id/fadingAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginBottom="92dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:textColor="@color/background_color"
+        android:textSize="@dimen/font_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintStart_toStartOf="@+id/animation"
+        app:texts="@array/text_welcome" />
+
+
+</RelativeLayout>

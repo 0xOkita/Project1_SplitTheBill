@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+
+    tools:context=".InputAmountMoney">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_InputAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_amount_of_money"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/textview_InputMoney"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="40dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout_InputAmount">
+
+        <EditText
+            android:id="@+id/editText_InputAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="132dp"
+            android:layout_marginRight="132dp"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:ems="4"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="center|bottom"
+            android:inputType="numberDecimal"
+            android:textColor="@color/background_color"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/dollar_sign"
+            android:textColor="@color/background_color"
+            android:textSize="@dimen/font_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/editText_InputAmount"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/NextToAddPeople"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="30dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/whitearrow"
+        android:fontFamily="@font/montserrat_semibold"
+        android:onClick="NextButtonClicked"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_dot"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="70dp"
+        android:onClick="onClick"
+        android:layout_height="70dp"
+        android:background="@drawable/circle_button"
+        android:text="@string/numDot"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_zero"
+        app:layout_constraintEnd_toStartOf="@+id/button_zero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_zero" />
+
+    <Button
+        android:id="@+id/button_zero"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="70dp"
+        android:onClick="onClick"
+        android:layout_height="70dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/circle_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/num0"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/NextToAddPeople"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_del"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:background="@drawable/trash"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:text="@string/num_del"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="@+id/button_zero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_zero"
+        app:layout_constraintTop_toTopOf="@+id/button_zero" />
+
+    <Button
+        android:id="@+id/button_one"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/circle_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/num1"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="@+id/button_two"
+        app:layout_constraintEnd_toStartOf="@+id/button_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_two" />
+
+    <Button
+        android:id="@+id/button_two"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/circle_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/num2"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toTopOf="@+id/button_zero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_three"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:onClick="onClick"
+        android:background="@drawable/circle_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/num3"
+        android:textColor="@color/white"
+
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_two"
+        app:layout_constraintTop_toTopOf="@+id/button_two" />
+
+    <Button
+        android:id="@+id/button_four"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:onClick="onClick"
+        android:background="@drawable/circle_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/num4"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_five"
+        app:layout_constraintEnd_toStartOf="@+id/button_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_five" />
+
+    <Button
+        android:id="@+id/button_five"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:onClick="onClick"
+        android:layout_margin="10dp"
+        android:background="@drawable/circle_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/num5"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:theme="@style/NumPadCustom"
+        app:layout_constraintBottom_toTopOf="@+id/button_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_six"
+        android:onClick="onClick"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/circle_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/num6"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_five"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_five"
+        app:layout_constraintTop_toTopOf="@+id/button_five" />
+
+    <Button
+        android:id="@+id/button_seven"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="70dp"
+        android:onClick="onClick"
+        android:layout_height="70dp"
+        android:background="@drawable/circle_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/num7"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_eight"
+        app:layout_constraintEnd_toStartOf="@+id/button_eight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_eight" />
+
+    <Button
+        android:id="@+id/button_eight"
+        android:onClick="onClick"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/circle_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/num8"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_five"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_nine"
+        android:onClick="onClick"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/circle_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/num9"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_eight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_eight"
+        app:layout_constraintTop_toTopOf="@+id/button_eight" />
+</androidx.constraintlayout.widget.ConstraintLayout>
